@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: it-asset-service-app
+    ports:
+      - "8080:80"
+    env_file:
+      - .env
+    restart: unless-stopped
